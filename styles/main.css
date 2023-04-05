@@ -5,19 +5,136 @@
 * Add your own CSS code below... 
 */
 
+/*Phone display: 0-480 px*/
+/*nav-bar*/
+.nav-bar{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+
+}
+.logo, .nav-btn, .join, .nav-btn-line{
+    flex-basis:100vw;
+    padding: 1rem;
+    text-align: center;
+}
+.nav-btn{
+    order: -2;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+.nav-btn__icon{
+    display: none;
+}
+.nav-btn-line{
+    order:-1;
+    border-top: 1px solid gray;
+    padding: 0;
+}
+.join{
+    display: none;
+}
 .log__img{
     border-radius: 50%;
 }
-
 .nav-btn__icon{
     width: 2.5rem;
 }
 .nav-btn__text{
     display: inline;
 }
+
+/*main-content*/
+.main-content{
+    display: flex;
+    flex-wrap: wrap;
+}
+.main-up, .email, .articles{
+    flex-basis: 100vw;
+}
+.main-up__nav{
+    display: none;
+}
+.email-form{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-between;
+}
+.email-form__icon-div, .email-form__text, .email-form__input, .email-form__btn{
+   margin: 1rem; 
+}
+.email-form__icon-div{
+    flex-basis: calc(20% - 2rem);
+}
+.email-form__text{
+    flex-basis: calc(80% - 2rem);
+    color: gray;
+    font-size: 1.5rem;
+    line-height: 1.8;
+}
+.email-form__input{
+    flex-basis: calc(75% - 2rem);
+    padding: 1rem 0 ;
+}
+.email-form__btn{
+    flex-basis: calc(25% - 2rem);
+    padding: 1rem 0;
+}
+.email{
+    padding: 3rem;
+}
+.email-form__icon-img{
+    width: 5rem;
+    opacity: 0.5;
+}
+.main-up__img{
+    width: 100%;
+}
+/*articles*/
+.articles{
+    display: flex;
+    flex-wrap: wrap;
+}
+.article{
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.article__img, .article__title, .article__text{
+    flex-basis: 100%;
+    padding: 2rem;
+}
+
+.article__title{
+    font-family: 'Lobster', cursive;
+    font-size: 2.5rem;
+}
+
 .email-form__icon{
     width: 4rem;
 }
 .icon-social{
     width: 2.5rem;
 }
+.main-up__img{
+    width: 100%;
+}
+
+/*contact*/
+.details{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.details__icons{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+
+
+
+
+
