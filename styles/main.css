@@ -1,0 +1,23 @@
+@import url(./_reset.css);
+@import url(./_base.css);
+@import url(./_typography.css);
+/* 
+* Add your own CSS code below... 
+*/
+
+.log__img{
+    border-radius: 50%;
+}
+
+.nav-btn__icon{
+    width: 2.5rem;
+}
+.nav-btn__text{
+    display: inline;
+}
+.email-form__icon{
+    width: 4rem;
+}
+.icon-social{
+    width: 2.5rem;
+}
