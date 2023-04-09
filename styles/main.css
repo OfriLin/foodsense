@@ -71,7 +71,7 @@
 .email-form__text{
     flex-basis: calc(80% - 2rem);
     color: gray;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.8;
 }
 .email-form__input{
@@ -119,9 +119,6 @@
 .icon-social{
     width: 2.5rem;
 }
-.main-up__img{
-    width: 100%;
-}
 .article__img{
     max-width: 300px;
 }
@@ -142,9 +139,12 @@
     justify-content: flex-end;
     gap:1rem;
 }
-
+/*********************************************************************************/
 /* media queries - 480px-767px*/
 @media all and (min-width: 480px) {
+    :root {
+        --page-width: 60rem;
+      }
     /*nav-bar*/
     .nav-btn-line{
         display: none;
@@ -152,10 +152,9 @@
     .nav-bar{
         align-items:center;
         justify-content: space-between;
-        max-width: 60rem;
+        max-width: var(--page-width);
         flex-wrap: nowrap;
         margin: auto;
-    
     }
     .logo{
         flex-basis:20vw;
@@ -172,7 +171,7 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        max-width: 60rem;
+        max-width: var(--page-width);
         margin: auto;
     }
     .dot-up, .dot-down, .email-form{
@@ -180,7 +179,7 @@
         padding: 0;
     }
     .main-up__img{
-        max-width: 60rem;
+        max-width: var(--page-width);
     }
     .main-up{
         display: flex;
@@ -188,7 +187,7 @@
     }
     /*articles*/
     .articles{
-        max-width: 60rem;
+        max-width: var(--page-width);
         margin:auto;
     }
     .article{
@@ -197,14 +196,121 @@
     }
     .article__img{
         width: 100%;
-        max-width: 30rem;
+        max-width: calc(var(--page-width) / 2);
     }
     /*contact*/
     .contact{
-        max-width: 60rem;
+        max-width: var(--page-width);
         margin: auto;
     }
-  } /*end media 480px*/
+  } 
+
+/*********************************************************************************/
+/* media queries - 767px-990px*/
+@media all and (min-width: 767px) {
+    :root {
+        --page-width: 78rem;
+    }
+    /*nav-bar*/
+    .nav-btn>li{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-btn__icon{
+        max-width: 4rem;;
+        display: block;
+        flex-basis: 100%;
+    }
+    /*main*/
+    .main-up{
+        flex-wrap: wrap;
+    }
+    .main-up__img, .main-up__nav{
+        flex-basis: 100%;
+    }
+    .main-up__nav{
+        max-width: var(--page-width);
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 100%;
+    }
+    .main-up__nav-li{
+        border: 1px solid white;
+        flex-grow: 1;
+        text-align: center;
+        background-color:lightblue;
+        padding: 1rem;
+    }
+    .email-form{
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .articles{
+        flex-wrap: nowrap;
+    }
+
+}
+
+/*********************************************************************************/
+/* media queries - 990px-1175px*/
+@media all and (min-width: 990px) {
+    :root {
+        --page-width: 2000rem;
+    }
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3rem;
+    }
+    .nav-bar{
+        flex-basis: 20%;
+        flex-wrap: wrap;
+        max-width: none;
+        margin: 0;
+        align-content: flex-start;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    .nav-btn{
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 2rem;
+    }
+    .nav-btn>li{
+        flex-basis: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .nav-btn__icon{
+        max-width: 2rem;;
+        display: inline;
+        flex-basis: 20%;
+    }
+    .join{
+        display: block;
+        order: 2;
+        text-align: left;
+    }
+    .main-content{
+        flex-basis: 80%;
+    }
+    .contact{
+        flex-basis: 100%;
+    }
+}
+
+/*********************************************************************************/
+/* media queries - 990px-1175px*/
+@media all and (min-width: 1175px) {
+    body{
+        padding: 1rem 10rem;
+    }
+}
+
+  
 
 
 
